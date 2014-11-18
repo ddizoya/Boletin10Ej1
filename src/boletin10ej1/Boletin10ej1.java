@@ -19,10 +19,11 @@ public class Boletin10ej1 {
     public static void main(String[] args) {
         
      Juego jg = new Juego ();
-     
+    
      jg.mandarDato();
-     if ((jg.mandarDato()<=50)&&(jg.mandarDato()>=1))
-            jg.adivinarDato();
+     if ((jg.getNumero()>=1)&&(jg.getNumero()<=50)){
+         jg.adivinarDato();
+     }
      
         
         

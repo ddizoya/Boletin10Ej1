@@ -22,7 +22,7 @@ public int getNumero(){
     
 public int mandarDato(){
  
- String pedirdato= JOptionPane.showInputDialog(null,"Introduce un número:");
+ String pedirdato= JOptionPane.showInputDialog(null,"Introduce el número secreto. ¡No se lo digas a nadie!");
  int pd = Integer.parseInt(pedirdato);
   
  if ((pd>=1)&&(pd<=50)){
@@ -35,10 +35,11 @@ public int mandarDato(){
 }    
 
 public void adivinarDato(){
- String pedirdato = JOptionPane.showInputDialog("Introduce número:");
- int pd = Integer.parseInt(pedirdato);
+ 
  
  for (int i=0; i<9;i++){
+ String pedirdato = JOptionPane.showInputDialog("¿Qué número es?");
+ int pd = Integer.parseInt(pedirdato);
      if (numero != pd)
          if (numero<=10)
              JOptionPane.showMessageDialog(null, "El número es menor o igual a 10. Tira otra vez.");
@@ -48,7 +49,7 @@ public void adivinarDato(){
                      JOptionPane.showMessageDialog(null, "El número es mayor a 20. ¿Lo adivinarás?");
      
      else if (numero == pd){
-     JOptionPane.showMessageDialog(null, "Lo has conseguido. ¡Enhorabuena! ♥");
+     JOptionPane.showMessageDialog(null, "Lo has conseguido. ¡Enhorabuena! ");
      break;
  }
              
