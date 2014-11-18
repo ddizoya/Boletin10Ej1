@@ -7,6 +7,8 @@ que orienten o segundo xogador sobre se o número tecleado e maior ou menor que 
  */
 package boletin10ej1;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author David
@@ -20,7 +22,10 @@ public class Boletin10ej1 {
         
      Juego jg = new Juego ();
     
-     jg.mandarDato();
+     String respuesta = respuesta = JOptionPane.showInputDialog("Introduce valor:");
+     int pd = Integer.parseInt(respuesta);
+     jg.setNumero(pd);
+     
      if ((jg.getNumero()>=1)&&(jg.getNumero()<=50)){
          jg.adivinarDato();
      }

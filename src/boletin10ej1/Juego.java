@@ -20,29 +20,14 @@ public int getNumero(){
     return numero;
 }
     
-public int mandarDato(){
- 
- String pedirdato= JOptionPane.showInputDialog(null,"Introduce el número secreto. ¡No se lo digas a nadie!");
- int pd = Integer.parseInt(pedirdato);
-  
- if ((pd>=1)&&(pd<=50)){
-     return numero;
- } else {
-     JOptionPane.showMessageDialog(null, "Se ha equivocado. El número debe estar \nentre 1 y 50.");
- }
- return 0;
- 
-}    
-
 public void adivinarDato(){
- 
  
  for (int i=0; i<9;i++){
  String pedirdato = JOptionPane.showInputDialog("¿Qué número es?");
  int pd = Integer.parseInt(pedirdato);
      if (numero != pd)
          if (numero<=10)
-             JOptionPane.showMessageDialog(null, "El número es menor o igual a 10. Tira otra vez.");
+             JOptionPane.showMessageDialog(null, "El número es menor o igual a 10. ");
              if (numero<=20)
                  JOptionPane.showMessageDialog(null, "El número está por debajo de 20, o es 20. ¿Quién sabe?");
                  if (numero > 20)
@@ -50,9 +35,9 @@ public void adivinarDato(){
      
      else if (numero == pd){
      JOptionPane.showMessageDialog(null, "Lo has conseguido. ¡Enhorabuena! ");
-     break;
+     
  }
-             
+    break;         
  }
 }
     
