@@ -22,7 +22,7 @@ public class Boletin10ej1 {
         
      Juego jg = new Juego ();
     
-     String respuesta = respuesta = JOptionPane.showInputDialog("Introduce el número secreto. ¡No se lo digas a nadie!");
+     String respuesta= JOptionPane.showInputDialog("Introduce el número secreto. ¡No se lo digas a nadie!");
      int pd = Integer.parseInt(respuesta);
      jg.setNumero(pd);
      
