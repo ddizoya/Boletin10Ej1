@@ -22,12 +22,14 @@ public class Boletin10ej1 {
         
      Juego jg = new Juego ();
     
-     String respuesta = respuesta = JOptionPane.showInputDialog("Introduce valor:");
+     String respuesta = respuesta = JOptionPane.showInputDialog("Introduce el número secreto. ¡No se lo digas a nadie!");
      int pd = Integer.parseInt(respuesta);
      jg.setNumero(pd);
      
      if ((jg.getNumero()>=1)&&(jg.getNumero()<=50)){
          jg.adivinarDato();
+     } else {
+         JOptionPane.showMessageDialog(null, "El valor introducido debe estar comprendido entre 1 y 50.");
      }
      
         
